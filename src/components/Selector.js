@@ -1,17 +1,20 @@
-import React from 'react';
-import countriesJson from "../countries.json";
 
-const Selector = () => {
+
+const Selector = (props) => {
+
 
   return (
-    <div>
-      <select>
-        {countriesJson.map((country, index) => 
-        <option key={index}>
-          {country.Slug}
-        </option>
-        )}
+    <div className="selector-container">
+      <select onChange={(e) => props.setCountry(e.target.value)}>
+        <option>select country</option>
+        {props.countriesJson.map((country, index) =>
+          <option key={index} value={country.Slug}>
+            {country.Country}
+          </option>
+          
+        )};
       </select>
+      <button onClick={props.getCountryData}>GetData</button>
     </div>
     
   )
