@@ -2,7 +2,9 @@ import React from 'react'
 
 const Title = () => {
   return (
-    <div>Title</div>
+    <div>
+      <h1>Covid Tracker</h1>
+    </div>
   )
 }
 

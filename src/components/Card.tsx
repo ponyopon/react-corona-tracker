@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
+import { CardType } from '../types'
 
-const Card = (props) => {
-    const [allCountriesData, setAllCountiriesData] = useState([]);
+const Card = ({allCountriesData }: CardType) => {
 
   return (
     <div className='card-container'>
         <button >Get All Data</button>
-        {props.allCountriesData.map((singleData, index) =>
+        {allCountriesData.map((singleData, index) =>
               <div key={index} className="card">
                   <div>
                       <h2>{singleData.Country}</h2>                   
